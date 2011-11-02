@@ -1,0 +1,7 @@
+[logwatchreview]
+mailto=<email1> <email2> <email3>
+savedir=/var/lib/logwatchreview
+rrfile=/var/lib/logwatchreview/.emailroundrobin
+confirm_baseurl=http://hostname/cgi-bin/logwatchconfirm.py
+owner=apache
+mailfrom=logwatch@hostname
