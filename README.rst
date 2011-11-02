@@ -1,11 +1,10 @@
 Installation
 ------------
-# Make sure logwatch is installed and configured to produce output to stdout (typically with "Print = Yes")
-# Make sure apache is installed and configured to serve /var/www/cgi-bin
-# Run 'sudo make install'
-# Edit /etc/cron.daily/0logwatch and change the logwatch line to:
-   logwatch | /usr/local/bin/logwatchreview/logwatchreview.py
-# Edit /etc/logwatchreview.cfg as necessary
+#. Make sure logwatch is installed and configured to produce output to stdout (typically with "Print = Yes")
+#. Make sure apache is installed and configured to serve /var/www/cgi-bin
+#. Run 'sudo make install'
+#. Edit your logwatch cron job to pipe the output to /usr/local/bin/logwatchreview.py
+#. Edit /etc/logwatchreview.cfg as necessary
 
 Configuration
 -------------
