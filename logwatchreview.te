@@ -1,0 +1,22 @@
+
+module logwatchreview 1.0;
+
+require {
+	type cron_var_lib_t;
+	type httpd_sys_script_t;
+	type var_lib_t;
+	class dir { write remove_name };
+	class file { getattr unlink };
+}
+
+#============= httpd_sys_script_t ==============
+#!!!! This avc is allowed in the current policy
+
+allow httpd_sys_script_t cron_var_lib_t:file { getattr unlink };
+#!!!! This avc is allowed in the current policy
+
+allow httpd_sys_script_t var_lib_t:dir { write remove_name };
+allow httpd_sys_script_t var_lib_t:file unlink;
+#!!!! This avc is allowed in the current policy
+
+allow httpd_sys_script_t var_lib_t:file getattr;
